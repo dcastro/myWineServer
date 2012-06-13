@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @wine_type.user_id %>
+</p>
+
+<p>
+  <b>Name fr:</b>
+  <%= @wine_type.name_fr %>
+</p>
+
+<p>
+  <b>Name en:</b>
+  <%= @wine_type.name_en %>
+</p>
+
+<p>
+  <b>Name pt:</b>
+  <%= @wine_type.name_pt %>
+</p>
+
+
+<%= link_to 'Edit', edit_wine_type_path(@wine_type) %> |
+<%= link_to 'Back', wine_types_path %>

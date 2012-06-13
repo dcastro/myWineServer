@@ -1,0 +1,33 @@
+<%= form_for(@wine_type) do |f| %>
+  <% if @wine_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@wine_type.errors.count, "error") %> prohibited this wine_type from being saved:</h2>
+
+      <ul>
+      <% @wine_type.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :name_fr %><br />
+    <%= f.text_field :name_fr %>
+  </div>
+  <div class="field">
+    <%= f.label :name_en %><br />
+    <%= f.text_field :name_en %>
+  </div>
+  <div class="field">
+    <%= f.label :name_pt %><br />
+    <%= f.text_field :name_pt %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
