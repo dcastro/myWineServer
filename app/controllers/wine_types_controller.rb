@@ -2,7 +2,11 @@ class WineTypesController < ApplicationController
   # GET /wine_types
   # GET /wine_types.json
   def index
-    @wine_types = WineType.all
+    if params[:user_id]
+      @wine_types = WineType.where(:user_id => params[:user_id])
+    else
+      @wine_types = WineType.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb
