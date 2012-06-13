@@ -11,10 +11,9 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
-  </div>
+	<div class="field">
+		<%= f.select :user_id, options_from_collection_for_select(@users, 'id', 'username') %>
+	</div>
   <div class="field">
     <%= f.label :name_fr %><br />
     <%= f.text_field :name_fr %>

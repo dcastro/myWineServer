@@ -13,7 +13,7 @@
 
 <% @wine_types.each do |wine_type| %>
   <tr>
-    <td><%= wine_type.user_id %></td>
+    <td><%= wine_type.user.username %></td>
     <td><%= wine_type.name_fr %></td>
     <td><%= wine_type.name_en %></td>
     <td><%= wine_type.name_pt %></td>

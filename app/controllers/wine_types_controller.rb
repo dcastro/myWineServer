@@ -25,6 +25,7 @@ class WineTypesController < ApplicationController
   # GET /wine_types/new.json
   def new
     @wine_type = WineType.new
+    @users = User.all
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +36,7 @@ class WineTypesController < ApplicationController
   # GET /wine_types/1/edit
   def edit
     @wine_type = WineType.find(params[:id])
+    @users = User.all
   end
 
   # POST /wine_types
