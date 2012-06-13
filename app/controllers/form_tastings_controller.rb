@@ -13,8 +13,18 @@ class FormTastingsController < ApplicationController
   # GET /form_tastings/1
   # GET /form_tastings/1.json
   def show
-    @form_tasting = FormTasting.find(params[:id])
-
+    if params[:id]
+      @form_tasting = FormTasting.find(params[:id])
+    else if params[:wine_type_id]
+      @wineType = WineType.where(:id => params[:wine_type_id]).first
+      if @wineType.form_tasting
+        @form_tasting = @wineType.form_tasting
+      else
+        @wineType.create
+      end
+      @form_tasting = @wineType.form_tasting
+    end
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @form_tasting }

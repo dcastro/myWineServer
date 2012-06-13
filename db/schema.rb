@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120613091928) do
+ActiveRecord::Schema.define(:version => 20120613094421) do
 
   create_table "form_tastings", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -30,8 +30,9 @@ ActiveRecord::Schema.define(:version => 20120613091928) do
     t.string   "name_fr"
     t.string   "name_en"
     t.string   "name_pt"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.integer  "form_tasting_id"
   end
 
 end

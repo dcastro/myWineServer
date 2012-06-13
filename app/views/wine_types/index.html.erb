@@ -20,6 +20,7 @@
     <td><%= link_to 'Show', wine_type %></td>
     <td><%= link_to 'Edit', edit_wine_type_path(wine_type) %></td>
     <td><%= link_to 'Destroy', wine_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'TastingForm', form_tasting_path(:wine_type_id => wine_type.id) %></td>
   </tr>
 <% end %>
 </table>
