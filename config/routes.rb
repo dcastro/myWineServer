@@ -1,4 +1,6 @@
 MyWineServer::Application.routes.draw do
+  resources :form_tastings
+
   resources :wine_types
 
   resources :users

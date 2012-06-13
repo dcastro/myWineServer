@@ -1,0 +1,22 @@
+<h1>Listing form_tastings</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @form_tastings.each do |form_tasting| %>
+  <tr>
+  	<td><%= form_tasting.id %></td>
+    <td><%= link_to 'Show', form_tasting %></td>
+    <td><%= link_to 'Edit', edit_form_tasting_path(form_tasting) %></td>
+    <td><%= link_to 'Destroy', form_tasting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Form tasting', new_form_tasting_path %>
